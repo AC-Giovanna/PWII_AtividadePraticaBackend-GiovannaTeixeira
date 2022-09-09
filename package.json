@@ -1,0 +1,21 @@
+{
+  "name": "pwii-atividadepratica",
+  "version": "1.0.0",
+  "description": "Projeto prático realizado para a aula de Programação Web II na Etec Antônio Furlan.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PW2",
+    "ETEC",
+    "Barueri",
+    "NODEJS",
+    "Atividade"
+  ],
+  "author": "Giovanna Teixeira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
