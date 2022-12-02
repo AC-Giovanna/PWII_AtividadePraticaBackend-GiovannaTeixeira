@@ -25,11 +25,13 @@ const AvatarModel = connection.define(
         },
         vida_avatar: {
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: false,
+            defaultValue: 1000
         },
         dinheiro_avatar: {
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: false,
+            defaultValue: 0
         },
         genero_avatar: {
             type: Sequelize.STRING(30),
@@ -46,7 +48,8 @@ const AvatarModel = connection.define(
     },
 );
 
-// AvataModel.sync({force:true});
+
+//AvatarModel.sync({force:true});
 
 // Exportação do modelo
 module.exports = AvatarModel;

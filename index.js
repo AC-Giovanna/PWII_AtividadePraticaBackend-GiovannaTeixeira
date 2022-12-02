@@ -9,8 +9,7 @@ const RouteAvatar = require('./Routes/RouteAvatar');
 // Tornando o Expresse executável
 const app = express ();
 
-
-
+app.use(express.json());
 
 app.use('/', RouteAvatar);
 
