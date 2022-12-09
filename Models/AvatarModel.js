@@ -48,7 +48,6 @@ const AvatarModel = connection.define(
     },
 );
 
-
 //AvatarModel.sync({force:true});
 
 // Exportação do modelo

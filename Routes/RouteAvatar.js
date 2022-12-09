@@ -9,6 +9,10 @@ const AvatarModel = require('../Models/AvatarModel');
 // Importando o gerenciador de rotas do Express
 const router = express.Router();
 
+/*
+ * Todos os campos da tabela avatar
+ * id_avatar, nome_avatar, genero_avatar, descricao_avatar, imagem_avatar, vida_avatar, dinheiro_avatar
+ */
 
 // ROTAS DA CATEGORIA AVATAR (CRUD)
 
@@ -17,10 +21,10 @@ router.post('/CadastrarAvatar', (req, res) =>{
     
     console.log(req.body);
 
-    let {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar} = req.body;
+    let {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar, vida_avatar, dinheiro_avatar} = req.body;
 
     AvatarModel.create(
-        {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar}
+        {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar, vida_avatar, dinheiro_avatar}
 
     )
     .then(
@@ -124,10 +128,10 @@ router.get('/ListarAvatarNome/:nome_avatar', (req, res)=>{
 //Rota de Alteração
 router.put('/AlterarAvatar', (req, res) =>{
     
-    const {id_avatar, nome_avatar, genero_avatar, descricao_avatar, imagem_avatar} = req.body;
+    const {id_avatar, nome_avatar, genero_avatar, descricao_avatar, imagem_avatar, vida_avatar, dinheiro_avatar} = req.body;
 
     AvatarModel.update(
-        {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar},
+        {nome_avatar, genero_avatar, descricao_avatar, imagem_avatar, vida_avatar, dinheiro_avatar},
         {where:{id_avatar}}
     )
     .then(
