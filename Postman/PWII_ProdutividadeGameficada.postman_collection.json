@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "cbc99b97-9bcf-449f-bbf4-1d2fc10d46de",
+		"name": "PWII_ProdutividadeGameficada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22798574"
+	},
+	"item": [
+		{
+			"name": "Categorias/Tabelas",
+			"item": [
+				{
+					"name": "Avatar",
+					"item": [
+						{
+							"name": "CadastrarAvatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome_avatar\" : \"\",\r\n    \"genero_avatar\" : \"\",\r\n    \"descricao_avatar\" : \"\",\r\n    \"imagem_avatar\": \"\",\r\n    \"vida_avatar\" : 1000,\r\n    \"dinheiro_avatar\" : 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/CadastrarAvatar",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"CadastrarAvatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarAvatar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/ListarAvatar",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ListarAvatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarAvatarPK",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/ListarAvatarPK/3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ListarAvatarPK",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarAvatarNome",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/ListarAvatarNome/Teste",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ListarAvatarNome",
+										"Teste"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarAvatar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_avatar\" : 1, \r\n    \"nome_avatar\" : \"\",\r\n    \"genero_avatar\" : \"\",\r\n    \"descricao_avatar\" : \"\",\r\n    \"imagem_avatar\": \"\",\r\n    \"vida_avatar\" : 1000,\r\n    \"dinheiro_avatar\" : 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/AlterarAvatar",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"AlterarAvatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletarAvatar",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/DeletarAvatar/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"DeletarAvatar",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tarefa",
+					"item": [
+						{
+							"name": "CadastrarTarefa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"titulo\" : \"\",\r\n   \"descricao\" : \"\",\r\n   \"prazo\" : \"\",\r\n   \"dificuldade\" : 1,\r\n   \"recompensa_dinheiro\" : 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/CadastrarTarefa",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"CadastrarTarefa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarTarefa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/ListarTarefas",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ListarTarefas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarTarefa",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_tarefa\" : 1,\r\n   \"titulo\" : \"\",\r\n   \"descricao\" : \"\",\r\n   \"prazo\" : \"\",\r\n   \"dificuldade\" : 1,\r\n   \"recompensa_dinheiro\" : 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/AlterarTarefa",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"AlterarTarefa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletarTarefa",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/DeletarTarefa/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"DeletarTarefa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jogador",
+					"item": [
+						{
+							"name": "CadastrarJogador",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"\",\r\n    \"nome_usuario\" : \"\",\r\n    \"senha\" : \"\",\r\n    \"pronome\" : \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/CadastrarJogador",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"CadastrarJogador"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarJogador",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/ListarJogadores",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ListarJogadores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarJogador",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_jogador\" : 1,\r\n    \"email\" : \"\",\r\n    \"nome_usuario\" : \"\",\r\n    \"senha\" : \"\",\r\n    \"pronome\" : \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/AlterarJogador",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"AlterarJogador"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletarJogador",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/DeletarJogador/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"DeletarJogador",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
