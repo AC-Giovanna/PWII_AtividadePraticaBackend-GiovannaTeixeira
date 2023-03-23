@@ -35,7 +35,9 @@ const TarefaModel = connection.define(
             allowNull: false,
             defaultValue: 0
         }
-    },
+    }, {
+        freezeTableName: true,
+    }
 );
 
 //Forçando a criação da tabela

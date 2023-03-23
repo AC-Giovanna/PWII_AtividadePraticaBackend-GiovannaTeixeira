@@ -29,7 +29,9 @@ const JogadorModel = connection.define(
             type: Sequelize.STRING(30),
             allowNull: true
         }
-    },
+    }, {
+        freezeTableName: true,
+    }
 );
 
 //Forçando a criação da tabela

@@ -45,7 +45,9 @@ const AvatarModel = connection.define(
             type: Sequelize.BLOB,
             allowNull: true
         },
-    },
+    }, {
+        freezeTableName: true,
+    }
 );
 
 //AvatarModel.sync({force:true});

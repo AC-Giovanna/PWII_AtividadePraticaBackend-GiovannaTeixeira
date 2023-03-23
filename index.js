@@ -1,8 +1,8 @@
 // Arquivo inicial da API
 
-
-// Importação do Express
+// Importação do Express e do Sequelize
 const express = require('express');
+const connection = require('./Databases/Database')
 
 //Importação das rotas da categoria, ou tabela, "avatar"
 const RouteAvatar = require('./Routes/RouteAvatar');
@@ -13,12 +13,15 @@ const RouteTarefa = require('./Routes/RouteTarefa');
 //Importação das rotas da categoria, ou tabela, "jogador"
 const RouteJogador = require('./Routes/RouteJogador');
 
-
+//Forçar criação das tabelas
+//connection.sync({ force: true });
 
 // Tornando o Express executável
 const app = express ();
 
+//Tornando possível ler JSON e formulários
 app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 //Utilização das rotas
 app.use('/', RouteAvatar);
