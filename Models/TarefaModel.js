@@ -15,7 +15,7 @@ const TarefaModel = connection.define(
         },
         titulo_tarefa: {
             type: Sequelize.STRING(500),
-            allowNull: true
+            allowNull: false
         },
         descricao_tarefa: {
             type: Sequelize.STRING(2000),
