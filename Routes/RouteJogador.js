@@ -71,10 +71,10 @@ router.get('/ListarJogadores', (req, res) =>{
 //Rota de Alteração
 router.put('/AlterarJogador', (req, res) =>{
     
-    const {id_jogador, email, nome_usuario, senha, pronome} = req.body;
+    const {id_jogador, email_usuario, nome_usuario, senha_usuario, pronome_usuario} = req.body;
 
     JogadorModel.update(
-        {email, nome_usuario, senha, pronome},
+        {email_usuario, nome_usuario, senha_usuario, pronome_usuario},
         {where:{id_jogador}}
     )
     .then(

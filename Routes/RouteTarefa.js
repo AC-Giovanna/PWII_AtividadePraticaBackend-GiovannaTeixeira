@@ -17,10 +17,10 @@ router.post('/CadastrarTarefa', (req, res) =>{
     
     console.log(req.body);
 
-    let {titulo, descricao, prazo, dificuldade, recompensa_dinheiro} = req.body;
+    let {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
 
     TarefaModel.create(
-        {titulo, descricao, prazo, dificuldade, recompensa_dinheiro}
+        {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa}
 
     )
     .then(
@@ -71,10 +71,10 @@ router.get('/ListarTarefas', (req, res) =>{
 //Rota de Alteração
 router.put('/AlterarTarefa', (req, res) =>{
     
-    const {id_tarefa, titulo, descricao, prazo, dificuldade, recompensa_dinheiro} = req.body;
+    const {id_tarefa, titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
 
     TarefaModel.update(
-        {titulo, descricao, prazo, dificuldade, recompensa_dinheiro},
+        {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa},
         {where:{id_tarefa}}
     )
     .then(

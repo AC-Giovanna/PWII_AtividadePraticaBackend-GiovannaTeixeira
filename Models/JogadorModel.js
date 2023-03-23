@@ -13,7 +13,7 @@ const JogadorModel = connection.define(
             primaryKey: true,
             autoIncrement: true
         },
-        email: {
+        email_usuario: {
             type: Sequelize.STRING(50),
             allowNull:false
         },
@@ -21,11 +21,11 @@ const JogadorModel = connection.define(
             type: Sequelize.STRING(50),
             allowNull: false
         },
-        senha: {
+        senha_usuario: {
             type: Sequelize.STRING(50),
             allowNull: false
         },
-        pronome: {
+        pronome_usuario: {
             type: Sequelize.STRING(30),
             allowNull: true
         }

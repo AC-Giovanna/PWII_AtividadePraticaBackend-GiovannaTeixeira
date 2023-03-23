@@ -13,24 +13,24 @@ const TarefaModel = connection.define(
             primaryKey: true,
             autoIncrement: true
         },
-        titulo: {
+        titulo_tarefa: {
             type: Sequelize.STRING(500),
             allowNull: true
         },
-        descricao: {
+        descricao_tarefa: {
             type: Sequelize.STRING(2000),
             allowNull: true
         },
-        prazo: {
+        prazo_tarefa: {
             type: Sequelize.DATE,
             allowNull: true
         },
-        dificuldade: {
+        dificuldade_tarefa: {
             type: Sequelize.INTEGER,
             allowNull: false,
             defaultValue: 1
         },
-        recompensa_dinheiro: {
+        recompensa_tarefa: {
             type: Sequelize.DECIMAL,
             allowNull: false,
             defaultValue: 0
