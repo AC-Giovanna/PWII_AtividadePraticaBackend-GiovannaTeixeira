@@ -6,7 +6,7 @@ const connection = require('../Databases/Database');
 
 //Criação da tabela e de seus campos
 const JogadorModel = connection.define(
-    'jogador',
+    'tbl_jogadores',
     {
         id_jogador: {
             type: Sequelize.INTEGER,
@@ -31,11 +31,10 @@ const JogadorModel = connection.define(
         }
     }, {
         freezeTableName: true,
+        createdAt: false,
+        updatedAt: false
     }
 );
-
-//Forçando a criação da tabela
-//JogadorModel.sync({force:true});
 
 //Exportação da model
 module.exports = JogadorModel;

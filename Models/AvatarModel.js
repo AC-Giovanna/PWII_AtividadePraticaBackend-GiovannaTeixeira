@@ -10,7 +10,7 @@ const connection = require('../Databases/Database');
 // Criação do modelo da categoria
 const AvatarModel = connection.define(
     // Nome da tabela seguido de um objeto JSON
-    'avatar',
+    'tbl_Avatares',
     {
         // Campos da tabela
         id_avatar: {
@@ -47,10 +47,10 @@ const AvatarModel = connection.define(
         },
     }, {
         freezeTableName: true,
+        createdAt: false,
+        updatedAt: false
     }
 );
-
-//AvatarModel.sync({force:true});
 
 // Exportação do modelo
 module.exports = AvatarModel;

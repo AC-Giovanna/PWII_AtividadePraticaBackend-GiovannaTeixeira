@@ -6,7 +6,7 @@ const connection = require('../Databases/Database');
 
 //Criação da tabela e seus campos
 const TarefaModel = connection.define(
-    'tarefa',
+    'tbl_tarefas',
     {
         id_tarefa: {
             type: Sequelize.INTEGER,
@@ -37,11 +37,10 @@ const TarefaModel = connection.define(
         }
     }, {
         freezeTableName: true,
+        createdAt: 'dataCriacao',
+        updatedAt: 'ultimaModificacao'
     }
 );
-
-//Forçando a criação da tabela
-//TarefaModel.sync({force:true});
 
 //Exporatação da model
 module.exports = TarefaModel;

@@ -13,7 +13,7 @@ const RouteTarefa = require('./Routes/RouteTarefa');
 //Importação das rotas da categoria, ou tabela, "jogador"
 const RouteJogador = require('./Routes/RouteJogador');
 
-//Forçar criação das tabelas
+//Forçar criação de todas as tabelas
 //connection.sync({ force: true });
 
 // Tornando o Express executável
@@ -32,5 +32,5 @@ app.use('/', RouteJogador);
 
 // Criação do webserver para requisições HTTP
 app.listen(3000, ()=>{
-    console.log('Testado com sucesso!');
+    console.log('Servidor rodando!');
 });
