@@ -8,4 +8,4 @@ Link do repositório da API no Git Hub:
 https://github.com/AC-Giovanna/PWII_AtividadePraticaBackend-GiovannaTeixeira.git
 
 Link do repositório do frontend no Git Hub:
-https://github.com/AC-Giovanna/PWII_AtividadePraticaFrontend-GiovannaTeixeira.git
+https://github.com/AC-Giovanna/PWIII_AtividadePraticaFrontend-GiovannaTeixeira.git
