@@ -68,10 +68,38 @@ router.get('/ListarTarefas', (req, res) =>{
     )
 });
 
+//Rota de listagem por id_tarefa
+router.get('/ListarTarefaPK/:id_tarefa', (req, res)=>{
+    
+    let {id_tarefa} = req.params;
+
+    TarefaModel.findByPk(id_tarefa)
+    .then(
+        (response)=>{
+            return res.status(200).json({
+                erroStatus:false,
+                mensagemStatus:"Tarefa listado com sucesso!",
+                data: response
+            })
+        }
+    )
+    .catch(
+        (erro)=>{
+            return res.status(400).json({
+                erroStatus:true,
+                mensagemStatus:"Erro ao listar Tarefa!",
+                erroObject:erro
+            });
+        }
+    )
+});
+
 //Rota de Alteração
 router.put('/AlterarTarefa', (req, res) =>{
     
-    const {id_tarefa, titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
+    const {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
+
+    let {id_tarefa} = req.params;
 
     TarefaModel.update(
         {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa},
@@ -124,6 +152,9 @@ router.delete('/DeletarTarefa/:id_tarefa', (req, res) =>{
         }
     );
 });
+
+//Exclusão
+
 
 // Exportação das rotas
 module.exports = router;
