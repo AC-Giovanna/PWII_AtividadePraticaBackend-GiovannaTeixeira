@@ -95,11 +95,9 @@ router.get('/ListarTarefaPK/:id_tarefa', (req, res)=>{
 });
 
 //Rota de Alteração
-router.put('/AlterarTarefa/:id_tarefa', (req, res) =>{
+router.put('/AlterarTarefa', (req, res) =>{
     
-    const {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
-
-    let {id_tarefa} = req.params;
+    const {id_tarefa, titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa} = req.body;
 
     TarefaModel.update(
         {titulo_tarefa, descricao_tarefa, prazo_tarefa, dificuldade_tarefa, recompensa_tarefa},

@@ -17,10 +17,10 @@ router.post('/CadastrarJogador', (req, res) =>{
     
     console.log(req.body);
 
-    let {email, nome_usuario, senha, pronome} = req.body;
+    let {email_usuario, nome_usuario, senha_usuario, pronome_usuario} = req.body;
 
     JogadorModel.create(
-        {email, nome_usuario, senha, pronome}
+        {email_usuario, nome_usuario, senha_usuario, pronome_usuario}
 
     )
     .then(
